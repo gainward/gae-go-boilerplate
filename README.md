@@ -1,6 +1,5 @@
 # Google App Engine Go Boilerplate
 
-
 ## About
 
 This project aims to give developers an easy to use boilerplate project that can
@@ -13,6 +12,21 @@ easily jumpstart projects utilizing App Engine and Go.
   using RPC calls to go between.
 * Built in support for Closure.
 * Generic build and deploy system.
+
+## Usage
+
+### Backend Changes
+
+Do nothing; App Engine should pick up your edits and recompile automatically
+
+### Frontend Changes
+
+* Run build.sh, which will use Closure to compile the JS and set things up to
+  serve.
+
+## Deploying to App Engine
+
+* Not finished.
 
 ## TODO
 
