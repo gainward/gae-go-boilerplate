@@ -1,10 +1,21 @@
 package handlers
 
 import (
-  "appengine"
-  "backend/models"
+  // "appengine"
+  // "backend/models"
+  "fmt"
+  "http"
+  "template"
 )
 
-func HellowWorld(w http.ResponseWriter, r *http.Request) {
+var (
+  indexTemplate = template.Must(template.ParseFile("frontend/index.html"))
+)
+
+func HelloWorld(w http.ResponseWriter, r *http.Request) {
   fmt.Fprint(w, "Hello, world!")
+}
+
+func Main(w http.ResponseWriter, r *http.Request) {
+  indexTemplate.Execute(w, nil)
 }

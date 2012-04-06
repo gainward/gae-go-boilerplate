@@ -6,5 +6,6 @@ import (
 )
 
 func init() {
-	http.HandleFunc("/", handlers.HelloWorld)
+  http.HandleFunc("/", handlers.Main)
+	http.HandleFunc("/helloWorld", handlers.HelloWorld)
 }

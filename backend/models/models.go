@@ -1,8 +1,8 @@
 package models
 
 import (
-  "appengine"
-  "appengine/datastore"
+  // "appengine"
+  // "appengine/datastore"
 )
 
 type MyUser struct {
