@@ -3,7 +3,8 @@
 ## About
 
 This project aims to give developers an easy to use boilerplate project that can
-easily jumpstart projects utilizing App Engine and Go.
+easily jumpstart projects utilizing App Engine's Go runtime and the Closure
+compiler.
 
 ## Features
 
@@ -11,7 +12,7 @@ easily jumpstart projects utilizing App Engine and Go.
 * Directory structure supports applications with backend/frontend architecture,
   using RPC calls to go between.
 * Built in support for Closure.
-* Generic build and deploy system.
+* Incorporates plovr to dynamically recompile JS during development
 
 ## Usage
 
@@ -21,8 +22,8 @@ Do nothing; App Engine should pick up your edits and recompile automatically
 
 ### Frontend Changes
 
-* Run build.sh, which will use Closure to compile the JS and set things up to
-  serve.
+* Run build.sh, which runs plovr in server mode.  Our default index.html calls
+  out to the plovr daemon to recompile the JS as defined in config.js.
 
 ## Deploying to App Engine
 
@@ -30,6 +31,8 @@ Do nothing; App Engine should pick up your edits and recompile automatically
 
 ## TODO
 
-* Build out frontend portion
-* Write Closure boilerplate
-* Develop build system
+* Develop push-to-production system.
+* Incorporate basic User model for backend.
+* Build example RPCs.
+* Include a more advanced directory structure for the frontend JS.
+* See about incorporating html5bp?
